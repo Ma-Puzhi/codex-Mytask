@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "My Tasks · Chat / Work Bridge",
+  "version": "2.3.2",
+  "description": "为 My Tasks 打开任务专属聊天或 Work，记录真实会话地址。",
+  "permissions": ["storage"],
+  "host_permissions": ["https://chatgpt.com/*", "https://my-tasks-puzhi.foggybirch1.chatgpt.site/*"],
+  "background": {"service_worker": "background.js", "type": "module"},
+  "content_scripts": [
+    {"matches": ["https://my-tasks-puzhi.foggybirch1.chatgpt.site/launch*"], "js": ["site.js"], "run_at": "document_start"},
+    {"matches": ["https://chatgpt.com/*"], "js": ["chat.js"], "run_at": "document_idle"}
+  ]
+}
