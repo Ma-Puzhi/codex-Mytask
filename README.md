@@ -658,9 +658,9 @@ MyTask
 
 # 📄 License
 
-开源前建议在仓库中添加 `LICENSE` 文件。
+MyTask is released under the **MIT License**.
 
-如果没有特殊的商业限制需求，可以考虑使用 MIT License。
+See [`LICENSE`](./LICENSE) for details.
 
 ---
 
