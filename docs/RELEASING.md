@@ -26,6 +26,9 @@ pnpm package:release
 
 仓库的 `release.yml` 在推送 `v*` 标签时执行完整检查，打包源码和本地预览
 扩展，并使用该版本的 `CHANGELOG.md` 创建 GitHub Release。
+首次添加工作流或需要补发已存在的标签时，也可在 Actions 页面手动运行，
+或在主分支提交 `VERSION` / 发布工作流变更来触发。发布任务先切换到
+`v$(cat VERSION)` 的标签源码，确保附件与版本一致；不覆盖已经存在的 Release。
 维护者需要允许仓库运行 GitHub Actions；工作流仅在发布任务中获得
 `contents: write` 权限。
 
