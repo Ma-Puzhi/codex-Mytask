@@ -1,4 +1,4 @@
-export const SITE_ORIGIN='https://my-tasks-puzhi.foggybirch1.chatgpt.site';
+export const SITE_ORIGIN='http://localhost:5173';
 export function conversationUrl(value){
   try{const u=new URL(value);return u.protocol==='https:'&&['chatgpt.com','chat.openai.com'].includes(u.hostname)&&!u.username&&!u.password&&/\/(?:c|work|tasks)\/[a-zA-Z0-9_-]{8,}(?:\/|$)/.test(u.pathname)?'https://chatgpt.com'+u.pathname:'';}catch{return '';}
 }
